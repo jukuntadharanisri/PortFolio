@@ -1,0 +1,228 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY  PORTFOLIO </title>
+<style>
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+html{scroll-behavior: smooth;}
+/*navbar*/
+.navbar{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(54, 52, 52, 0.5);
+	position: sticky;
+	top: 0;
+}
+
+.navbar ul{
+	display:flex;
+	list-style: none;
+	margin:20px 0px;
+}
+.navbar ul li{
+	font-family:century;
+	font-size:1.1rem;
+	font-weight:bold;}
+.navbar ul li a{
+	text-decoration:none;
+	color:white;
+	padding: 8px 25px;
+	transition:all .6s ease;
+}
+.navbar ul li a:hover{
+	background-color:pink;
+	color:black;
+	box-shadow: 0 0 10px white;
+}
+#home{
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0,0,0,0.5);
+	height: 840px;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+
+#home::before{
+	content: "";
+	position: absolute;
+	top:0;
+	right:0;
+	background: url("girl1.jfif")  no-repeat center center/cover;
+	height: 900px;
+	width: 100%;
+	z-index: -1;
+	opacity: .8;
+	}
+.main{
+	display: flex;
+	flex-direction: column;
+	/* borde: 1px solid white; */
+	align-items: center;
+	position: absolute;
+	top: 30%;
+	right: 10%;
+}
+.headings{
+	font-family: century;
+	font-size: 3rem;
+	text-align: center;
+	margin: 0px 500px;
+	}
+.btn{
+	padding: 10px 35px;
+	background-color: transparent;
+	border: 1px solid white;
+	color: white;
+	outline:none;
+	transition: .6s ease;
+	}
+.btn:hover{
+	cursor: pointer;
+	background-color: white;
+	color: black;
+	box-shadow: 0 0 5px white, 0 0 10px white;
+	font-weight: bold;
+}
+/* About Selection */
+#about{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding:20px;
+	margin-bottom: 50px;
+}
+#pic{ display: flex;}
+#pic img{
+	width:575px;
+	height:300px;
+	}
+#intro{
+	display: flex;
+	flex-direction: column;
+	text-align: justify;
+	padding: 10px;
+}
+#intro h2{
+	font-size: 2rem;
+	margin-bottom: 20px;
+}
+/*Portfolio section */
+#Portfolio{
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(238, 206, 206, 0.9);
+	color: rgb(245, 141, 6);
+	align-items: center;
+	padding: 20px;
+}	
+.gallery{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	box-sizing: border-box;
+}
+.gallery img{
+	width: 360px;
+	height:240px;
+	margin: 10px;
+}
+
+/*Contact section*/
+#contact{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0.9);
+	color: beige;
+	padding: 20px;
+}
+.form{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	align-items: center;
+	margin: 20px 0px;
+}
+.input{
+	padding: 12px;
+	margin: 15px;
+	width: 30%;
+	border: none;
+	outline:none;
+}
+#msg{
+	padding: 12px;
+	margin: 15px;
+	width: 30%;
+	border: none;
+	outline:none;
+}
+#send{
+	padding: 12px;
+	margin: 15px;
+	width: 30%;
+	border:8%;
+	outline: none;
+}
+#send:hover{
+	cursor:pointer;
+	box-shadow: 0 0 10px red;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li> <a href="#home">Home </a></li>
+			<li> <a href="#about">About Me </a></li>
+			<li> <a href="#Portfolio">Portfolio</a></li>
+			<li> <a href="#contact">Contact</a></li>
+		</ul>
+	</nav>
+	
+	<section id="home">
+		<div class="main">
+			<h1 class="headings"> I AM <br>JUKUNTA DHARANISRI</h1>
+			<button class="btn"> Hire Me </button>
+		</div>
+	</section>
+	<section id="about">
+		<h1 class="headings">ABOUT ME </h1>
+		<div id="pic">
+			<img src="photo.jpg" alt="">
+			<div id="intro">
+				<h2>Jukunta Dharanisri </h2>
+				<p>Hello, I'm Jukunta Dharanisri, a passionate front-end developer with expertise in HTML, CSS, and JavaScript. I love creating user-friendly and visually appealing websites that provide a great user experience. With a strong attention to detail and a problem-solving mindset, I strive to deliver high-quality code and exceed client expectations.</p>
+				
+			</div>
+		</div>
+	</section>
+	<section id="Portfolio">
+		<h1 class="headings">PORTFOLIO </h1>
+		<div class="gallery">
+			<img src="1.jfif" alt="">
+			<img src="2.jfif" alt="">
+			<img src="3.jfif" alt="">
+			<img src="4.jfif" alt="">
+			<img src="5.jfif" alt="">
+		</div>
+	</section>
+	<section id="contact">
+		<h1 class="headings">CONTACT </h1>
+		<form action="" class="form">
+			<input type="text" name="name" class="input" placeholder="Enter your name">
+			<input type="email" name="email" class="input" placeholder="Enter your email">
+			<textarea name="msg" id="msg" cols="30" rows="10" placeholder= "message" > </textarea> 
+			<input type="submit" value="send" id="send">
+		</form>
+	</section>
+</body>
+</html>
